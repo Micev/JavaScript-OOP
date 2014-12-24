@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Canvas Geometry API</title>
+    <script src="_1_Shape.js"></script>
+    <script src="_2_MovingShapes.js"></script>
+    <script src="_2_CanvasGeometryAPI.js"></script>
+    <script src="_2_RemovingShape.js"></script>
+    <script src="_2_ZindexRedrawing.js"></script>
+    <link rel="stylesheet" href="_2_CanvasGeometryAPI.css" type="text/css" />
+</head>
+<body onload="new API.hideAdvancedOptions">
+<main>
+    <div class="requiresHolder">
+        <span class="coordX">
+            <label for="coordX">X: </label>
+            <input type="text" id="coordX" />
+        </span>
+        <span class="coordY">
+            <label for="coordY">Y: </label>
+            <input type="text" id="coordY" />
+        </span>
+        <span class="color">
+            <label for="color">Color: </label>
+            <input type="color" id="color" />
+        </span>
+    </div>
+    <div class="choseShape">
+        <label for="choseShape">Shape: </label>
+        <select id="choseShape" onchange="new API.changeShape">
+            <option value="shape" selected>
+                -- Chose Shape --
+            </option>
+            <option value="rectangle">
+                Rectangle
+            </option>
+            <option value="triangle">
+                Triangle
+            </option>
+            <option value="point">
+                Point
+            </option>
+            <option value="segment">
+                Segment
+            </option>
+        </select>
+    </div>
+    <div class="optionals">
+        <div class="rectangle">
+            <span class="rectangleWidth">
+                <label for="rectangleWidth">Width: </label>
+                <input type="text" id="rectangleWidth" />
+            </span>
+            <span class="rectangleHeight">
+                <label for="rectangleHeight">Height: </label>
+                <input type="text" id="rectangleHeight" />
+            </span>
+        </div>
+        <div class="triangle">
+            <span class="triangleX2">
+                <label for="triangleX2">X2: </label>
+                <input type="text" id="triangleX2" />
+            </span>
+            <span class="triangleY2">
+                <label for="triangleY2">Y2: </label>
+                <input type="text" id="triangleY2" />
+            </span>
+            <span class="triangleX3">
+                <label for="triangleX3">X3: </label>
+                <input type="text" id="triangleX3" />
+            </span>
+            <span class="triangleY3">
+                <label for="triangleY3">Y3: </label>
+                <input type="text" id="triangleY3" />
+            </span>
+        </div>
+        <div class="segment">
+            <span class="segmentX2">
+                <label for="segmentX2">X2: </label>
+                <input type="text" id="segmentX2" />
+            </span>
+            <span class="segmentY2">
+                <label for="segmentY2">Y2: </label>
+                <input type="text" id="segmentY2" />
+            </span>
+        </div>
+        <div class="point"></div>
+    </div>
+    <div class="listShapes">
+    </div>
+    <div class="shapeControls">
+        <span class="upArrow" onclick="new MoveShape.ShapeUp">UP</span>
+        <span class="downArrow" onclick="new MoveShape.ShapeDown">DOWN</span>
+        <span class="removeShape" onclick="new RemovingShape.Remove">REMOVE</span>
+    </div>
+    <canvas width="500px" height="400px" id="shapesContainer">
+    </canvas>
+    <input type="button" id="createShape" onclick="new API.createShape" value="Create Shape" />
+</main>
+</body>
+</html>
