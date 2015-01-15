@@ -1,0 +1,40 @@
+#wrapper{
+    width: 700px;
+    margin: 0 auto;
+    /*border: 2px solid #000;*/
+    padding: 5px;
+}
+#container{
+    border: 2px solid #000000;
+   padding: 5px;
+
+}
+h1{
+    text-align: center;
+}
+#section{
+    margin: 5px 0px;
+    /*border: 1px solid black;*/
+}
+.addItem{
+    text-align: right;
+    margin: 5px 0px 10px 0px;
+}
+#section h2{
+    margin-top: 5px;
+    text-align: right;
+}
+#section>div>section{
+    border: 2px solid silver;
+}
+.contentBox{
+    padding: 5px;
+}
+.contentBox>input{
+    display: inline-block;
+}
+.contentBox>div{
+    border-bottom: 1px solid #000000;
+    display: inline-block;
+    width: 95%;
+}
